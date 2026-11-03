@@ -1,0 +1,276 @@
+/* Mobile-only layout (designed at 390 x 844). */
+.itinerary {
+  --brand: #ea2180;
+  --violet: #8849f5;
+  --ink: #101010;
+  --muted: #5f5f6b;
+  --rule: rgba(16, 16, 16, 0.14);
+  --display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --mono: 'Martian Mono', ui-monospace, monospace;
+
+  max-width: 480px;
+  min-height: 100dvh;
+  margin: 0 auto;
+  overflow-x: hidden;
+  background: #fff;
+  color: var(--ink);
+  font-family: var(--display);
+  text-align: left;
+}
+
+.itinerary p,
+.itinerary h1,
+.itinerary h2 {
+  margin: 0;
+}
+
+.itinerary-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px 0;
+}
+
+.itinerary-logo {
+  display: flex;
+  line-height: 0;
+}
+
+.itinerary-logo img {
+  display: block;
+  height: 27px;
+  width: auto;
+}
+
+.itinerary-participant {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.itinerary-participant strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.itinerary-notice {
+  margin: 12px 20px 0;
+  padding: 8px 12px;
+  border: 1px solid var(--violet);
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+/* Rocket navigation */
+.rocket {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 36px 16px 22px;
+  background: #fff;
+}
+
+.rocket-track {
+  position: relative;
+  height: 66px;
+}
+
+.rocket-flame {
+  position: absolute;
+  left: 0;
+  top: 11px;
+}
+
+.rocket-fin {
+  position: absolute;
+  left: 40px;
+}
+
+.rocket-fin-top {
+  top: -16px;
+}
+
+.rocket-fin-bottom {
+  top: 64px;
+}
+
+.rocket-body {
+  position: absolute;
+  left: 38px;
+  right: 61px;
+  top: 0;
+  height: 66px;
+  box-sizing: border-box;
+  display: flex;
+  overflow: hidden;
+  border: 1.5px solid var(--violet);
+  border-right: 0;
+  border-radius: 12px 0 0 12px;
+  background: #fff;
+}
+
+.rocket-nose {
+  position: absolute;
+  right: 0;
+  top: 0;
+  overflow: visible;
+}
+
+.rocket-seg {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  border-right: 1px solid var(--rule);
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  background: #fff;
+  color: var(--ink);
+  font-family: inherit;
+  cursor: pointer;
+  transition: flex 0.35s ease, background 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.rocket-seg:last-child {
+  border-right: 0;
+}
+
+.rocket-seg[aria-pressed='true'] {
+  flex-grow: 2.8;
+  background: linear-gradient(100deg, #d81e7e 0%, #7f3fe8 100%);
+  color: #fff;
+}
+
+.rocket-seg:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: -3px;
+}
+
+.rocket-num {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.rocket-seg[aria-pressed='true'] .rocket-num {
+  font-size: 32px;
+}
+
+.rocket-label {
+  font-family: var(--mono);
+  font-size: 8.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Day heading */
+.day-head {
+  padding: 12px 28px 28px;
+  text-align: center;
+}
+
+.day-head h2 {
+  max-width: 300px;
+  margin: 0 auto;
+  font-weight: 800;
+  font-size: 38px;
+  line-height: 1;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+  color: var(--ink);
+}
+
+.day-head .day-date {
+  margin-top: 22px;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7a3ae8;
+}
+
+/* Schedule */
+.schedule {
+  margin: 0;
+  padding: 0 0 60px;
+  list-style: none;
+}
+
+.slot {
+  display: grid;
+  grid-template-columns: 104px minmax(0, 1fr);
+  column-gap: 12px;
+  padding: 17px 20px 18px;
+  border-top: 1px solid var(--rule);
+}
+
+.slot:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.slot-time {
+  min-width: 0;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  color: var(--brand);
+  overflow-wrap: anywhere;
+}
+
+.slot-main {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.slot-title {
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+  overflow-wrap: anywhere;
+}
+
+.slot-detail {
+  font-size: 14.5px;
+  line-height: 1.4;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+.lunch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 20px 14px;
+  background: linear-gradient(90deg, #d81e7e 0%, #7f3fe8 100%);
+  color: #fff;
+}
+
+.lunch-title {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.lunch-time {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: right;
+}

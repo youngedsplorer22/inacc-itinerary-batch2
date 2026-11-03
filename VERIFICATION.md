@@ -6,7 +6,7 @@ Source: second itinerary tab of the Google Sheet (identical in `INACC_Day4_Day5_
 - "Asisstant" -> "Assistant" (Day 1 guest line).
 - "disbursal" / "Disbursal" -> "dispersal" / "Dispersal" (the sheet's own Notes tab uses "dispersal").
 - "Ex- ISRO" -> "Ex-ISRO".
-- "CANSAT" / "CanSAT" -> "CanSat" (one spelling everywhere, matching the "CanSat" nav heading).
+- "CANSAT" / "CanSAT" / "CanSat" -> "CANSAT" (one spelling everywhere, matching the "CANSAT" nav heading).
 - "visualization" -> "visualisation" (Day 2), to match "visualisation" and "centre" elsewhere in the sheet.
 - "Snacks break" -> "Snack Break"; "Snack break" -> "Snack Break"; "Rocket launches" -> "Rocket Launches" (consistent capitalization).
 - "his Team" -> "his team"; "Pickup by Parents" / "Pick Up by Parents" -> "Pick up by parents".
@@ -32,7 +32,7 @@ Source: second itinerary tab of the Google Sheet (identical in `INACC_Day4_Day5_
 
 ## Unresolved / please confirm
 1. Group 1 / Group 2: this tab, like the other, has one schedule for Days 4-5 and there is no participant-to-group mapping. Everyone sees that schedule. Integration point: `src/participant/group.js`. No assignments from the other itinerary were reused.
-2. Day 4 text "Pre-launch inspection of Group B rockets": shown exactly as written. "Group B" is a group label; confirm it should be visible to students.
+2. Day 4 text "Pre-launch inspection of rockets": shown exactly as written. "Group B" is a group label; confirm it should be visible to students.
 3. Design-board Day 4 heading "Mission Simulation & Launch Prep" sits over workshops and a rocket inspection on this tab. Kept unchanged as instructed.
 4. Day 5 "Teams report and register at SNIS": "SNIS" is not expanded in the sheet. "Transfer to Vidyashilp" is shown as written.
 5. Meal counts in the Notes tab (245 on Days 4 and 5) suggest about half of the participants per itinerary on those days. No ID-to-itinerary mapping exists in the workbook.
@@ -52,7 +52,7 @@ Totals: 50 rows compared, 16 rows with wording corrections, 34 identical. No row
 | 3 | 8:00 - 9:00 | Opening Ceremony and Guest Talks | Dr. Deepak Singh - Asisstant Professor - IIT Bombay | 8:00 - 9:00 AM | Opening Ceremony and Guest Talks | Dr. Deepak Singh - Assistant Professor - IIT Bombay | CORRECTED |
 | 4 | 9:00 - 9:50 | Fundamentals of Rocketry | Theoretical session with experiential activities for the explanation of thrust, rocket CG & CP, etc. | 9:00 - 9:50 AM | Fundamentals of Rocketry | Theoretical session with experiential activities for the explanation of thrust, rocket CG & CP, etc. | same |
 | 5 | 9:50 - 10:00 | Snack Break |  | 9:50 - 10:00 AM | Snack Break |  | same |
-| 6 | 10:00 - 10:50 | Fundamentals of CANSAT | Theoretical session with visual activities and videos | 10:00 - 10:50 AM | Fundamentals of CanSat | Theoretical session with visual activities and videos | CORRECTED |
+| 6 | 10:00 - 10:50 | Fundamentals of CANSAT | Theoretical session with visual activities and videos | 10:00 - 10:50 AM | Fundamentals of CANSAT | Theoretical session with visual activities and videos | CORRECTED |
 | 7 | 10:50 - 11:00 | Movement to Breakout Rooms |  | 10:50 - 11:00 AM | Movement to Breakout Rooms |  | same |
 | 8 | 11:00 - 13:00 | Rocket Integration | Component visualisation, shroud line fixation & parachute folding + lower body assembly - fixation of aeropack and centre rings. | 11:00 AM - 1:00 PM | Rocket Integration | Component visualisation, shroud line fixation & parachute folding + lower body assembly - fixation of aeropack and centre rings. | same |
 | 9 | 13:00 - 13:45 | Lunch |  | 1:00 - 1:45 PM | Lunch |  | same |
@@ -72,10 +72,10 @@ Totals: 50 rows compared, 16 rows with wording corrections, 34 identical. No row
 | 7 | 11:15 - 11:30 | Break |  | 11:15 - 11:30 AM | Break |  | same |
 | 8 | 11:30 - 13:15 | Rocket Integration | PCB Mounting + Ground control integration test and coupler integration with rocket body | 11:30 AM - 1:15 PM | Rocket Integration | PCB Mounting + Ground control integration test and coupler integration with rocket body | same |
 | 9 | 13:15 - 14:00 | Lunch |  | 1:15 - 2:00 PM | Lunch |  | same |
-| 10 | 14:00 - 15:30 | CANSAT Integration | Circuit testing on breadboard + CanSAT PCB integration and CanSAT parachute integration | 2:00 - 3:30 PM | CanSat Integration | Circuit testing on breadboard + CanSat PCB integration and CanSat parachute integration | CORRECTED |
+| 10 | 14:00 - 15:30 | CANSAT Integration | Circuit testing on breadboard + CANSAT PCB integration and CANSAT parachute integration | 2:00 - 3:30 PM | CANSAT Integration | Circuit testing on breadboard + CANSAT PCB integration and CANSAT parachute integration | CORRECTED |
 | 11 | 15:30 - 15:45 | Snack Break followed by disbursal | Pick up by parents from Vidyashilp between 3:45 - 4:00 pm | 3:30 - 3:45 PM | Snack Break followed by dispersal | Pick up by parents from Vidyashilp between 3:45 - 4:00 PM | CORRECTED |
 
-## Day 3 - CanSat Engineering, Thu 03 Dec (sheet heading: "Day 3")
+## Day 3 - CANSAT Engineering, Thu 03 Dec (sheet heading: "Day 3")
 
 | # | Sheet time | Sheet session | Sheet activity | Site time | Site title | Site detail | Status |
 |---|---|---|---|---|---|---|---|
@@ -99,7 +99,7 @@ Totals: 50 rows compared, 16 rows with wording corrections, 34 identical. No row
 | 3 | 10:00- 10:15 AM | Snack break |  | 10:00 - 10:15 AM | Snack Break |  | CORRECTED |
 | 4 | 10:15 - 12:00 | Workshop Session 2 | Software workshop by Mr. Prakhar Jain and his Team | 10:15 AM - 12:00 PM | Workshop Session 2 | Software workshop by Mr. Prakhar Jain and his team | CORRECTED |
 | 5 | 12:00 - 1:00 pm | Lunch |  | 12:00 - 1:00 PM | Lunch |  | same |
-| 6 | 1:00 PM to 1:30 Pm | Pre-launch inspection of Group B rockets (inspected rockets tagged as cleared for Day 5) |  | 1:00 - 1:30 PM | Pre-launch inspection of Group B rockets (inspected rockets tagged as cleared for Day 5) |  | same |
+| 6 | 1:00 PM to 1:30 Pm | Pre-launch inspection of rockets (inspected rockets tagged as cleared for Day 5) |  | 1:00 - 1:30 PM | Pre-launch inspection of rockets (inspected rockets tagged as cleared for Day 5) |  | same |
 | 7 | 1:30 - 2:00 pm | Snack break followed by disbursal | Pick Up by Parents from Vidyashilp Academy 2 -2:30 pm | 1:30 - 2:00 PM | Snack Break followed by dispersal | Pick up by parents from Vidyashilp Academy 2:00 - 2:30 PM | CORRECTED |
 
 ## Day 5 - Final Launch & Valedictory, Sat 05 Dec (sheet heading: "Day 5")

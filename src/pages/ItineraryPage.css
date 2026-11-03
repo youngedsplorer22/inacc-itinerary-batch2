@@ -201,7 +201,7 @@
 /* Schedule */
 .schedule {
   margin: 0;
-  padding: 0 0 60px;
+  padding: 0 0 28px;
   list-style: none;
 }
 
@@ -273,4 +273,53 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   text-align: right;
+}
+
+/* Previous / next day arrows (bottom of the page) */
+.day-pager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 20px calc(32px + env(safe-area-inset-bottom));
+}
+
+.day-pager-btn {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1.5px solid var(--violet);
+  border-radius: 12px;
+  background: linear-gradient(100deg, #d81e7e 0%, #7f3fe8 100%);
+  color: #fff;
+  font-family: var(--display);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.day-pager-btn:disabled {
+  border-color: var(--rule);
+  background: #fff;
+  color: rgba(16, 16, 16, 0.28);
+  cursor: not-allowed;
+}
+
+.day-pager-btn:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.day-pager-status {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
 }

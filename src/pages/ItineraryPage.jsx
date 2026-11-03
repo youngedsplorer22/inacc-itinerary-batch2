@@ -1,16 +1,24 @@
 import { useState } from 'react'
 import logo from '../assets/inacc-logo.png'
 import { DAYS, getDayRows } from '../data/itinerary.js'
+import { getInitialDayIndex } from '../data/eventSchedule.js'
 import { getGroupForParticipant } from '../participant/group.js'
 import { useParticipantId } from '../participant/useParticipantId.js'
 import './ItineraryPage.css'
 
 export default function ItineraryPage() {
   const { participantId, isInvalid } = useParticipantId()
-  const [selectedIndex, setSelectedIndex] = useState(0)
+  const [selectedIndex, setSelectedIndex] = useState(() => getInitialDayIndex())
   const day = DAYS[selectedIndex]
   const rows = getDayRows(day, getGroupForParticipant(participantId))
   const lastIndex = DAYS.length - 1
+
+  // Used by the bottom arrows: also brings the new day's heading into view.
+  const goToDay = (index) => {
+    if (index < 0 || index > lastIndex) return
+    setSelectedIndex(index)
+    window.scrollTo({ top: 0 })
+  }
 
   return (
     <main className="itinerary">
@@ -98,6 +106,30 @@ export default function ItineraryPage() {
           )}
         </ol>
       </section>
+
+      <nav className="day-pager" aria-label="Previous and next day">
+        <button
+          type="button"
+          className="day-pager-btn"
+          aria-label="Previous day"
+          disabled={selectedIndex === 0}
+          onClick={() => goToDay(selectedIndex - 1)}
+        >
+          <span aria-hidden="true">←</span>
+        </button>
+        <span className="day-pager-status" aria-live="polite">
+          Day {day.num} of {DAYS.length}
+        </span>
+        <button
+          type="button"
+          className="day-pager-btn"
+          aria-label="Next day"
+          disabled={selectedIndex === lastIndex}
+          onClick={() => goToDay(selectedIndex + 1)}
+        >
+          <span aria-hidden="true">→</span>
+        </button>
+      </nav>
     </main>
   )
 }

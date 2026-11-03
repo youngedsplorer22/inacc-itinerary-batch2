@@ -52,7 +52,7 @@ describe('ItineraryPage', () => {
 
   it('shows the design-board headings and never the word Batch', () => {
     renderPage()
-    const expected = [['Orient', 'Registration & Orientation'], ['Rocketry', 'Rocketry Fundamentals'], ['CanSat', 'CanSat Engineering'], ['Simulate', 'Mission Simulation & Launch Prep'], ['Launch', 'Final Launch & Valedictory']]
+    const expected = [['Orient', 'Registration & Orientation'], ['Rocketry', 'Rocketry Fundamentals'], ['CANSAT', 'CANSAT Engineering'], ['Simulate', 'Mission Simulation & Launch Prep'], ['Launch', 'Final Launch & Valedictory']]
     expect(DAYS.map((d) => [d.code, d.stage])).toEqual(expected)
     for (const d of DAYS) {
       fireEvent.click(screen.getByRole('button', { name: new RegExp(`^Day ${d.num},`) }))
